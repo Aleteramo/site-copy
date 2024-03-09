@@ -1,4 +1,9 @@
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Imposta lo sfondo su nero o su un altro colore */
+    height: 100%; /* Assicurati che occupino l'intera altezza della pagina */
+  background-color: transparent; /* O il colore dello sfondo della tua scena 3D */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

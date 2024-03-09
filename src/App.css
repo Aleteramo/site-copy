@@ -1,38 +1,109 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.full-screen-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+/* App.css */
+.text-section {
+  
+  padding: 20px;
+  background-color: #f5f5f5; /* Scegli un colore di sfondo se necessario */
+  text-align: center; /* Centra il testo se desiderato */
+  margin: 20px 0; /* Aggiunge spazio sopra e sotto la sezione di testo */
+  z-index: 3;
+
+}
+.scene-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.contenuto-testuale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
   color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.carousel-section {
+  min-height: 20vh;
+  width: 100vw;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  margin-top: 0vh;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/* App.css */
+.carousel-container {
+  overflow-y: auto; 
+  overflow-x: hidden;
+  min-width: 350vw; /* Imposta una larghezza minima o adatta questo valore */
+  display: flex;
+  max-height: 90vh; /* Imposta un'altezza massima per il carosello */
+  align-items: center; /* Centra gli elementi verticalmente */
+  flex-wrap: nowrap; /* Impedisce agli elementi di andare a capo */
+  flex-direction: row;
+  justify-content: center; /* Centra gli elementi orizzontalmente */
+  gap: 200px; /* Distanza tra le slide */
+  padding: 0px 0; /* Padding sopra e sotto per dare spazio */
+  margin: auto; /* Centra il carousel nell'elemento genitore */
+  -webkit-overflow-scrolling: touch; /* Migliora lo scorrimento su dispositivi touch */
+  scroll-snap-type: x mandatory; /* Abilita lo snap per le immagini */
+  scroll-behavior: smooth; /* Opzionale per uno scorrimento più fluido */ 
+background-color: transparent;
+height: 300px;
+
+}
+
+.carosello-immagine {
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Aggiunge transizione per l'ombra, oltre alla trasformazione */
+  width: 275px; /* Larghezza fissa per tutte le immagini */
+  height: 225px; /* Altezza fissa per tutte le immagini */
+  object-fit: cover; /* Assicura che l'immagine copra l'area senza distorcere */
+  border-radius: 15px; /* Bordi arrotondati per un effetto stondato */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombra leggera per un effetto di profondità */
+}
+
+.carosello-immagine:hover {
+  transform: scale(1.1); /* Ingrandisce l'immagine del 10% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Effetto di profondità maggiore quando l'immagine è in hover */
+}
+
+/* Media query per adattare le dimensioni delle immagini su schermi più grandi */
+@media (min-width: 768px) {
+  .carosello-immagine {
+    width: 250px; /* Larghezza aumentata per tablet e desktop */
+    height: auto; /* Mantiene proporzioni */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 1024px) {
+  .carosello-immagine {
+    width: 300px; /* Ulteriore aumento per schermi grandi */
   }
 }
