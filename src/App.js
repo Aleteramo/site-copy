@@ -1,31 +1,25 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+import Home from './Home';
+import DettaglioCapitolo from './DettaglioCapitolo';
 import NeuralScene from './NeuralScene';
-import Carosello from './Carosello';
-import DettaglioCapitolo from './DettaglioCapitolo'; 
+import './App.css'; // Importa una volta qui
+
+// Rimuovi l'importazione di Carosello se non viene utilizzato direttamente in App.js
+// import Carosello from  './Carosello'; // Assicurati che il percorso sia corretto se necessario
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <Router basename="/site">
+      <div>
+        {/* Renderizza NeuralScene fuori e indipendentemente dalle Routes per usarlo come sfondo */}
         <NeuralScene />
+        
+        {/* Il contenuto che cambia in base alla route */}
         <Routes>
-          <Route path="/" element={
-             <>
-             <section className="full-screen-section">
-               <div className="contenuto-testuale">
-                 <h1>Titolo della Mia Tesi</h1>
-                 <p>Questa è una breve descrizione della mia tesi.</p>
-               </div>
-             </section>
-             <section className="carousel-section">
-               <Carosello />
-             </section>
-           </>
-          } />
+          <Route path="/" element={<Home />} />
           <Route path="/dettaglio/:id" element={<DettaglioCapitolo />} />
+          {/* Altre route se necessario */}
         </Routes>
       </div>
     </Router>
@@ -33,6 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-

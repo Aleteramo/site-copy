@@ -7,14 +7,16 @@ const NeuralScene = ({ isScrolled }) => {
   const mountRef = useRef(null);
 
   useEffect(() => {
-    
+    const currentRef = mountRef.current; 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 5;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true }); 
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current.appendChild(renderer.domElement);
+    if (currentRef) {
+      currentRef.appendChild(renderer.domElement);
+    }
 
     let cube;
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -80,11 +82,11 @@ const NeuralScene = ({ isScrolled }) => {
 
     return () => {
       window.removeEventListener('resize', onWindowResize);
-      if (mountRef.current && renderer.domElement) {
-        mountRef.current.removeChild(renderer.domElement);
+      if (currentRef && renderer.domElement) { // Usa la variabile copiata nella funzione di pulizia
+        currentRef.removeChild(renderer.domElement);
       }
     };
-  }, [isScrolled]); 
+  }, [isScrolled]);
 
   return (
     <div ref={mountRef} className="scene-container" />

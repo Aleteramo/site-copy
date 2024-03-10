@@ -1,67 +1,69 @@
-// Carosello.js
-import React, { useRef, useEffect, useState } from 'react';
-import { useSpring, animated } from '@react-spring/web';
+import React, { useState, useEffect, useRef } from 'react'; // Aggiungi useRef qui
 import { Link } from 'react-router-dom';
 
+// Importa le immagini
 import immagine1 from './immagini2/immagine1.jpg';
 import immagine2 from './immagini2/immagine2.jpg';
 import immagine3 from './immagini2/immagine3.jpg';
 import immagine4 from './immagini2/immagine4.jpg';
 import immagine5 from './immagini2/immagine5.jpg';
 
-const CaroselloImage = ({ src, alt, index }) => {
-  const [style, api] = useSpring(() => ({
-    scale: 1,
-    boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)',
-    config: { mass: 1, tension: 210, friction: 20 },
-  }));
-
-  return (
-    <Link to={`/dettaglio/${index}`}>
-      <animated.img
-        src={src}
-        alt={alt}
-        onMouseEnter={() => api.start({ scale: 1.1, boxShadow: '0px 20px 30px rgba(0, 0, 0, 0.5)' })}
-        onMouseLeave={() => api.start({ scale: 1, boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.2)' })}
-        style={{
-          transform: style.scale.to(scale => `scale(${scale})`),
-          boxShadow: style.boxShadow,
-        }}
-        className="carosello-immagine"
-      />
-    </Link>
-  );
-};
-
+// Definisci la variabile immagini come un array dei percorsi delle immagini importate
 const immagini = [immagine1, immagine2, immagine3, immagine4, immagine5];
+
 
 const Carosello = () => {
   const caroselloRef = useRef(null);
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [caroselloStartY, setCaroselloStartY] = useState(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      { threshold: 1.0 }
-    );
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
 
-    if (caroselloRef.current) {
-      observer.observe(caroselloRef.current);
-    }
-
-    return () => {
-      if (caroselloRef.current) {
-        observer.unobserve(caroselloRef.current);
+      // Imposta la posizione di inizio del carosello al primo scroll che lo rende visibile
+      if (caroselloRef.current && caroselloStartY === null) {
+        const caroselloRect = caroselloRef.current.getBoundingClientRect();
+        if (caroselloRect.top < window.innerHeight) {
+          setCaroselloStartY(currentScrollY);
+        }
       }
     };
-  }, []);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [caroselloStartY]);
+
+  const calculatePosition = (index) => {
+    // Se caroselloStartY non è ancora stato impostato, mantieni le immagini fuori dalla viewport
+    if (caroselloStartY === null) return window.innerWidth;
+
+    // Calcola la posizione delle immagini basata sulla differenza tra scrollY e caroselloStartY
+    const scrollOffset = scrollY - caroselloStartY;
+    const movementSpeed = 8; // Regola la velocità di movimento delle immagini
+    let position = window.innerWidth - (scrollOffset * movementSpeed) - (index * -50); // '100' è la distanza tra le immagini
+
+    // Assicurati che le immagini non si muovano troppo a sinistra
+    position = Math.max(position, -window.innerWidth * (index + 1));
+
+    return position;
+  };
 
   return (
     <div ref={caroselloRef} className="carousel-container">
       {immagini.map((src, index) => (
-        <CaroselloImage key={index} src={src} alt={`Immagine ${index + 1}`} index={index} />
+        <Link key={index} to={`/dettaglio/${index}`}>
+          <img
+            src={src}
+            alt={`Immagine ${index + 1}`}
+            style={{ transform: `translateX(${calculatePosition(index)}px)` }}
+            className="carosello-immagine"
+          />
+        </Link>
       ))}
     </div>
   );
