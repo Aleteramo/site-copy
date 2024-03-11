@@ -1,25 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import DettaglioCapitolo from './DettaglioCapitolo';
 import NeuralScene from './NeuralScene';
-import './App.css'; // Importa una volta qui
-
-// Rimuovi l'importazione di Carosello se non viene utilizzato direttamente in App.js
-// import Carosello from  './Carosello'; // Assicurati che il percorso sia corretto se necessario
+import './App.css';
+import Capitolo1 from './capitoli/cap1';
+import Capitolo2 from './capitoli/cap2';
+import Capitolo3 from './capitoli/cap3';
+import Capitolo4 from './capitoli/cap4';
+import Capitolo5 from './capitoli/cap5';
 
 function App() {
   return (
     <Router basename="/site">
       <div>
-        {/* Renderizza NeuralScene fuori e indipendentemente dalle Routes per usarlo come sfondo */}
-        <NeuralScene />
+        <NeuralScene /> {/* Usato come sfondo */}
         
-        {/* Il contenuto che cambia in base alla route */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dettaglio/:id" element={<DettaglioCapitolo />} />
-          {/* Altre route se necessario */}
+          <Route path="/dettaglio/1" element={<Capitolo1 />} />
+          <Route path="/dettaglio/2" element={<Capitolo2 />} />
+          <Route path="/dettaglio/3" element={<Capitolo3 />} />
+          <Route path="/dettaglio/4" element={<Capitolo4 />} />
+          <Route path="/dettaglio/5" element={<Capitolo5 />} />
+          {/* Aggiungi altre route se necessario */}
         </Routes>
       </div>
     </Router>

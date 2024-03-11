@@ -164,3 +164,65 @@ margin-top: 100px; /* Aggiunge spazio sotto al carosello */
   max-width: 50%;
   height: auto;
 }
+
+
+.box-semi-trasparente {
+  font-weight: bold; /* Rende il testo grassetto */
+  color: rgb(255, 255, 255); /* Colore del testo bianco */
+  
+  /* La proprietà text-shadow è dichiarata due volte. È meglio unificarla o scegliere una delle due. */
+  /* Per un effetto di ombra morbida: */
+  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); */
+  /* Per un effetto di contorno del testo: */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     0.5px  0.5px 0 #000;
+
+  /* La proprietà background-color è dichiarata due volte con valori diversi. */
+  /* Scegli uno sfondo. Se vuoi un rosso semi-trasparente, usa questo: */
+  background-color: rgba(128, 0, 128, 0.5);  /* Se vuoi bianco semi-trasparente, rimuovi la riga sopra e usa solo bianco. */
+  
+  /* La proprietà padding è dichiarata due volte. Scegli un valore di padding e rimuovi l'altro. */
+  padding: 20px; /* Aggiunge spazio intorno al testo */
+  
+  border-radius: 10px; /* Bordo arrotondato */
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  
+  width: 80%;
+  max-height: 90vh; /* Impedisce al box di superare l'altezza della viewport */
+  overflow-y: auto; /* Rende il contenuto scorrevole se supera l'altezza del box */
+  
+  box-shadow: 0 4px 8px rgba(19, 255, 11, 0.279); /* Ombra esterna per effetto elevato */
+}
+
+/* App.css */
+.affermazione-contestazione {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.affermazione, .contestazione {
+  flex: 1;
+}
+
+.affermazione {
+  margin-right: 10px;
+}
+
+.contestazione {
+  margin-left: 10px;
+}
+
+.contestazione img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}

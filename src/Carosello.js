@@ -56,7 +56,8 @@ const Carosello = () => {
   return (
     <div ref={caroselloRef} className="carousel-container">
       {immagini.map((src, index) => (
-        <Link key={index} to={`/dettaglio/${index}`}>
+        
+        <Link key={index} to={`/dettaglio/${index + 1}`}>
           <img
             src={src}
             alt={`Immagine ${index + 1}`}
