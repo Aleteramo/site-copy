@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import NeuralScene from './NeuralScene';
 import './App.css';
@@ -11,7 +11,7 @@ import Capitolo5 from './capitoli/cap5';
 
 function App() {
   return (
-    <Router basename="/site">
+    <Router>
       <div>
         <NeuralScene /> {/* Usato come sfondo */}
         

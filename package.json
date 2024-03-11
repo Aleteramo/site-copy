@@ -1,7 +1,7 @@
 {
   "name": "site",
   "version": "0.1.0",
-  "homepage": "https://Aleteramo.github.io/site/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@react-spring/web": "^9.7.3",
