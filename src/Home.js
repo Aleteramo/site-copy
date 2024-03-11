@@ -32,7 +32,7 @@ function Home() {
     <>
       <section className="contenuto-testuale">
         <h1>"Decodificare gli Stereotipi: L'Impatto delle Intelligenze Artificiali sui Messaggi Pubblicitari"</h1>
-        <p>Qui troverai informazioni sulla mia tesi.</p>
+        <p>Se il sito vi paice fate scan nel qr-code alla fine della presentazione</p>
       </section>
       <section className="carousel-section">
         <Carosello />
