@@ -158,7 +158,7 @@ const animate = () => {
 
       for (let i = 0; i < intersects.length; i++) {
         if (intersects[i].object === umanoideRef.current) {
-          window.location.href = 'https://ia-liart-one.vercel.app/';
+          window.location.href = '';
           break;
         }
       }
