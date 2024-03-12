@@ -32,7 +32,10 @@ function Home() {
     <>
       <section className="contenuto-testuale">
         <h1>"Decodificare gli Stereotipi: L'Impatto delle Intelligenze Artificiali sui Messaggi Pubblicitari"</h1>
-        <p>Se il sito vi paice fate scan nel qr-code alla fine della presentazione</p>
+        <p><p>"L'intelligenza artificiale non riesce a creare o a gestire una pianificazione strategica complessa."</p>
+        <p>"Non può svolgere un lavoro che richieda una precisa coordinazione oculo-manuale."</p>
+        <p>"Né di interagire con empatia e compassione."</p>
+        <p>"L’intelligenza artificiale, quindi, non può sostituire le diverse forme di intelligenza umana."</p></p>
       </section>
       <section className="carousel-section">
         <Carosello />
