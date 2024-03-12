@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.acf92aef.css",
-    "main.js": "./static/js/main.d4a06618.js",
+    "main.css": "./static/css/main.28e18a30.css",
+    "main.js": "./static/js/main.3011c18e.js",
     "static/js/453.adc34edb.chunk.js": "./static/js/453.adc34edb.chunk.js",
     "static/media/immagine2.jpg": "./static/media/immagine2.ca035419f59e3ce2a040.jpg",
     "static/media/immagine3.jpg": "./static/media/immagine3.745e45ac6a5ade29a67b.jpg",
     "static/media/Sedol.jpg": "./static/media/Sedol.3ec5f4446c9d3ba53fbf.jpg",
     "static/media/immagine5.jpg": "./static/media/immagine5.26bb01675d6f4bd55b3f.jpg",
     "static/media/pubblicitaEsselunga.jpg": "./static/media/pubblicitaEsselunga.3bce31d3aae784fb632c.jpg",
+    "static/media/umanoide.png": "./static/media/umanoide.884ed54838bb8a00e704.png",
     "static/media/immagine1.jpg": "./static/media/immagine1.8ba495fb03c5683ea82f.jpg",
     "static/media/logounite.jpeg": "./static/media/logounite.ae5246c95d9a7587335e.jpeg",
     "static/media/pubblicitaPanzani.jpg": "./static/media/pubblicitaPanzani.e8b832800092f4b0b508.jpg",
     "static/media/immagine4.jpg": "./static/media/immagine4.cc040d38a37e2697483e.jpg",
     "static/media/qrcodesito.png": "./static/media/qrcodesito.6ff48c7b4b86c9693056.png",
     "index.html": "./index.html",
-    "main.acf92aef.css.map": "./static/css/main.acf92aef.css.map",
-    "main.d4a06618.js.map": "./static/js/main.d4a06618.js.map",
+    "main.28e18a30.css.map": "./static/css/main.28e18a30.css.map",
+    "main.3011c18e.js.map": "./static/js/main.3011c18e.js.map",
     "453.adc34edb.chunk.js.map": "./static/js/453.adc34edb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.acf92aef.css",
-    "static/js/main.d4a06618.js"
+    "static/css/main.28e18a30.css",
+    "static/js/main.3011c18e.js"
   ]
 }

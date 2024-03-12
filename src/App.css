@@ -81,58 +81,61 @@ code {
 }
 
 
+@media (max-width: 768px) {
+  /* App.css */
+  .carousel-container {
+    overflow-x: hidden;
+    min-width: 100vw;
+    display: flex;
+    max-height: 50vh; /* Altezza relativa per adattarsi meglio a schermi di diverse dimensioni */
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    background-color: transparent;
+    z-index: 3;
+    margin-top: 0; /* Rimuovi il margine superiore su dispositivi mobili */
+  }
 
-/* App.css */
-.carousel-container {
-  overflow-x: hidden; 
-  min-width: 100vw; /* Imposta una larghezza minima o adatta questo valore */
-  display: flex;
-  max-height: 90vh; /* Imposta un'altezza massima per il carosello */
-  align-items: center; /* Centra gli elementi verticalmente */
-  flex-wrap: nowrap; /* Impedisce agli elementi di andare a capo */
-  flex-direction: row;
-  justify-content: center; /* Centra gli elementi orizzontalmente */
-  padding: 0px 0; /* Padding sopra e sotto per dare spazio */
-  margin: auto; /* Centra il carousel nell'elemento genitore */
-  -webkit-overflow-scrolling: touch; /* Migliora lo scorrimento su dispositivi touch */
-  scroll-snap-type: x mandatory; /* Abilita lo snap per le immagini */
-  scroll-behavior: smooth; /* Opzionale per uno scorrimento più fluido */ 
-background-color: transparent;
-height: 300px;
-z-index: 3; /* Assicurati che sia almeno pari a quello di .App per essere visibile */
-margin-top: 100px; /* Aggiunge spazio sotto al carosello */
+  .carosello-immagine-wrapper {
+    height: 60%;
+    overflow: hidden;
+  }
 
-
+  .carosello-immagine {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }
-
-.carosello-immagine-wrapper {
-  height: 60%; /* Adjust this value to your liking */
-  overflow: hidden;
-}
-
-.carosello-immagine {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
-
 
 /* Media query per adattare le dimensioni delle immagini su schermi più grandi */
 @media (min-width: 768px) {
   .carosello-immagine {
-    width: 250px; /* Larghezza aumentata per tablet e desktop */
-    height: auto; /* Mantiene proporzioni */
+    width: 250px;
+    height: auto;
   }
 }
 
 @media (min-width: 1024px) {
   .carosello-immagine {
-    width: 300px; /* Ulteriore aumento per schermi grandi */
+    width: 300px;
   }
 }
+
+/* Opzionale: Media query per schermi più piccoli */
+@media (max-width: 480px) {
+  .carosello-immagine {
+    width: 150px; /* Riduci ulteriormente la larghezza delle immagini su schermi molto piccoli */
+  }
+}
+
 
 
 
