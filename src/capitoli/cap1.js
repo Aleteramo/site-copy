@@ -1,6 +1,6 @@
 import React from 'react';
 import Sedol from '../immagini2/Sedol.jpg';
-import immagine2 from '../immagini2/immagine2.jpg';
+import Autorialità from '../immagini2/Autorialità.png';
 import './Cap1.css'; // Assicurati di creare un file CSS per i tuoi stili
 
 const Cap1 = () => {
@@ -15,7 +15,7 @@ const Cap1 = () => {
       </div>
       <div className="box-immagini">
         <img src={Sedol} alt="Analisi pubblicità Panzani" />
-        <img src={immagine2} alt="Analisi pubblicità Esselunga" />
+        <img src={Autorialità} alt="Analisi pubblicità Esselunga" />
       </div>
       <div className="commenti-contestazioni">
         <p><strong>Contestazione:</strong> AlphaGo ha battuto Lee Sedol nel 2016, dimostrando capacità strategiche superiori.</p>

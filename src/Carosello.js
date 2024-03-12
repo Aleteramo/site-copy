@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef } from 'react'; // Aggiungi useRef q
 import { Link } from 'react-router-dom';
 
 // Importa le immagini
-import immagine1 from './immagini2/immagine1.jpg';
+import Autorialità from './immagini2/Autorialità.png';
 import immagine2 from './immagini2/immagine2.jpg';
 import immagine3 from './immagini2/immagine3.jpg';
 import immagine4 from './immagini2/immagine4.jpg';
 import immagine5 from './immagini2/immagine5.jpg';
 
 // Definisci la variabile immagini come un array dei percorsi delle immagini importate
-const immagini = [immagine1, immagine2, immagine3, immagine4, immagine5];
+const immagini = [Autorialità, immagine2, immagine3, immagine4, immagine5];
 
 
 const Carosello = () => {
