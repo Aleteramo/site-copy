@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/site-copy/static/css/main.28e18a30.css",
-    "main.js": "/site-copy/static/js/main.3f72cdb9.js",
+    "main.css": "/site-copy/static/css/main.0c9efb6b.css",
+    "main.js": "/site-copy/static/js/main.79366098.js",
     "static/js/453.adc34edb.chunk.js": "/site-copy/static/js/453.adc34edb.chunk.js",
+    "static/media/fmri.mov": "/site-copy/static/media/fmri.49d6da47e90990eae49d.mov",
+    "static/media/fake.mov": "/site-copy/static/media/fake.892d93112d7e58547a97.mov",
+    "static/media/sora.mov": "/site-copy/static/media/sora.3bc846d287d5e7af2bd5.mov",
+    "static/media/gemini.mov": "/site-copy/static/media/gemini.5c68f8f2eef94899033a.mov",
     "static/media/immagine2.jpg": "/site-copy/static/media/immagine2.ca035419f59e3ce2a040.jpg",
-    "static/media/immagine3.jpg": "/site-copy/static/media/immagine3.745e45ac6a5ade29a67b.jpg",
-    "static/media/Sedol.jpg": "/site-copy/static/media/Sedol.3ec5f4446c9d3ba53fbf.jpg",
+    "static/media/memoria.png": "/site-copy/static/media/memoria.31fc2b18540e25020a67.png",
     "static/media/immagine5.jpg": "/site-copy/static/media/immagine5.26bb01675d6f4bd55b3f.jpg",
     "static/media/pubblicitaEsselunga.jpg": "/site-copy/static/media/pubblicitaEsselunga.3bce31d3aae784fb632c.jpg",
     "static/media/Autorialità.png": "/site-copy/static/media/Autorialità.b9be61d42e1227051d6b.png",
     "static/media/umanoide.png": "/site-copy/static/media/umanoide.884ed54838bb8a00e704.png",
-    "static/media/immagine1.jpg": "/site-copy/static/media/immagine1.8ba495fb03c5683ea82f.jpg",
+    "static/media/intelligenza.png": "/site-copy/static/media/intelligenza.b2dab2be2037aac738d4.png",
     "static/media/logounite.jpeg": "/site-copy/static/media/logounite.ae5246c95d9a7587335e.jpeg",
     "static/media/pubblicitaPanzani.jpg": "/site-copy/static/media/pubblicitaPanzani.e8b832800092f4b0b508.jpg",
-    "static/media/immagine4.jpg": "/site-copy/static/media/immagine4.cc040d38a37e2697483e.jpg",
-    "static/media/qrcodesito.png": "/site-copy/static/media/qrcodesito.6ff48c7b4b86c9693056.png",
+    "static/media/marketing.jpeg": "/site-copy/static/media/marketing.94a36c15def18b9e330d.jpeg",
+    "static/media/qrcodesito.png": "/site-copy/static/media/qrcodesito.ec8b63fc9a259aa3b873.png",
+    "static/media/Vesuvio.jpeg": "/site-copy/static/media/Vesuvio.658f2f56683e0e239f82.jpeg",
     "index.html": "/site-copy/index.html",
-    "main.28e18a30.css.map": "/site-copy/static/css/main.28e18a30.css.map",
-    "main.3f72cdb9.js.map": "/site-copy/static/js/main.3f72cdb9.js.map",
+    "main.0c9efb6b.css.map": "/site-copy/static/css/main.0c9efb6b.css.map",
+    "main.79366098.js.map": "/site-copy/static/js/main.79366098.js.map",
     "453.adc34edb.chunk.js.map": "/site-copy/static/js/453.adc34edb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28e18a30.css",
-    "static/js/main.3f72cdb9.js"
+    "static/css/main.0c9efb6b.css",
+    "static/js/main.79366098.js"
   ]
 }
